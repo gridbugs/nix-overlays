@@ -83,27 +83,17 @@ let
         });
       });
 
-      ocamlPackages_5_2 = ocaml-ng.ocamlPackages_5_2.overrideScope (oself: osuper: {
-        ocaml = osuper.ocaml.overrideAttrs (_: {
-          src = super.fetchFromGitHub {
-            owner = "ocaml";
-            repo = "ocaml";
-            rev = "5.2.1";
-            hash = "sha256-0000000000000000000000000000000000000000000=";
-          };
-        });
-      });
-
-      ocamlPackages_5_2_test = ocaml-ng.ocamlPackages_5_2.overrideScope (oself: osuper: {
-        ocaml = osuper.ocaml.overrideAttrs (_: {
-          src = super.fetchFromGitHub {
-            owner = "ocaml";
-            repo = "ocaml";
-            rev = "5.2.1";
-            hash = "sha256-0000000000000000000000000000000000000000000=";
-          };
-        });
-      });
+      ocamlPackages_5_2_1 = newOCamlScope {
+        major_version = "5";
+        minor_version = "2";
+        patch_version = "1";
+        src = super.fetchFromGitHub {
+          owner = "ocaml";
+          repo = "ocaml";
+          rev = "5.2.1";
+          hash = "sha256-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=";
+        };
+      };
 
 
       ocamlPackages_5_3 = newOCamlScope {
