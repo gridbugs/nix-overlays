@@ -89,7 +89,7 @@ let
             owner = "ocaml";
             repo = "ocaml";
             rev = "5.2.1";
-            hash = "sha256-cN5feAgjEX0ojyQaNWI5X4Q7HuccOmwLQsi9Khi8PB0=";
+            hash = "sha256-0000000000000000000000000000000000000000000=";
           };
         });
       });
